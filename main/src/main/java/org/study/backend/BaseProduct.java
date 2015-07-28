@@ -1,4 +1,4 @@
-package org.study.org.study.backend;
+package org.study.backend;
 
 import java.util.HashMap;
 import java.util.Map;
