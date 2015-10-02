@@ -3,7 +3,7 @@ package org.study.core.concurrency.thread;
 /**
  * Created by iovchynnikov on 7/29/2015.
  */
-public class Syncronizations {
+public class Synchronizations {
 
     public void run() {
         Counter counter = new Counter();
@@ -75,7 +75,7 @@ public class Syncronizations {
     }
 
     public static void main(String[] args) {
-        new Syncronizations().run();
+        new Synchronizations().run();
     }
 
 }
