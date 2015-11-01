@@ -1,6 +1,7 @@
 package org.study.core.object;
 
-import org.study.org.study.backend.BaseProduct;
+
+import org.study.backend.BaseProduct;
 
 public class CloneObject extends BaseProduct implements Cloneable {
 
