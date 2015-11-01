@@ -8,21 +8,21 @@ import java.util.regex.Pattern;
  */
 public class RegExpUtils {
     /*
-This method counts and returns the total number of syllables in the
-document (the stored text). To count the number of syllables in a word,
-you should use the rule that every contiguous sequence of one or more vowels,
-except for a lone “e” at the end of a word if the word has another vowel
-or set of contiguous vowels, makes up one syllable. You should consider
-y a vowel. Under these rules the words “the”, “fly”, “yes”, “cave” and
-“double” all have 1 syllable, but "segue" has two syllables. Notice that
-this isn’t exactly correct (“double” actually has 2 syllables),
-but it’s close enough for our purposes. Here are some more examples
-with the number of syllables your method should return to help you:
-    "contiguous" (3 syllables), "sleepy" (2 syllables),
-    "obvious" (2 syllables), "toga" (2 syllables).
-Notice that our rules get a lot wrong, especially when you have more
-than 2 vowels in a row, but these are the rules we will test you against.
-     */
+    This method counts and returns the total number of syllables in the
+    document (the stored text). To count the number of syllables in a word,
+    you should use the rule that every contiguous sequence of one or more vowels,
+    except for a lone “e” at the end of a word if the word has another vowel
+    or set of contiguous vowels, makes up one syllable. You should consider
+    y a vowel. Under these rules the words “the”, “fly”, “yes”, “cave” and
+    “double” all have 1 syllable, but "segue" has two syllables. Notice that
+    this isn’t exactly correct (“double” actually has 2 syllables),
+    but it’s close enough for our purposes. Here are some more examples
+    with the number of syllables your method should return to help you:
+        "contiguous" (3 syllables), "sleepy" (2 syllables),
+        "obvious" (2 syllables), "toga" (2 syllables).
+    Notice that our rules get a lot wrong, especially when you have more
+    than 2 vowels in a row, but these are the rules we will test you against.
+    */
     private static Pattern pattern = Pattern.compile("[aeiouy]");
 
     public static int getCount(String source) {
