@@ -37,7 +37,7 @@ class Waiter implements Runnable {
         synchronized (key) {
             key.notify();
         }
-        System.out.println("Waiter run");
+        System.out.println("Waiter execute");
     }
 }
 class Executor implements Runnable {

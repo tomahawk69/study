@@ -12,7 +12,7 @@ public class RunnableDemo implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(title + " run...");
+        System.out.println(title + " execute...");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

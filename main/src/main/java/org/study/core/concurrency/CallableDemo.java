@@ -10,7 +10,7 @@ public class CallableDemo implements Callable {
 
     @Override
     public Object call() throws Exception {
-        System.out.println("Callable run...");
+        System.out.println("Callable execute...");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

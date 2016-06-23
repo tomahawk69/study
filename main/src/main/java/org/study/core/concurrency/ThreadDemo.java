@@ -18,7 +18,7 @@ public class ThreadDemo extends Thread {
 
     @Override
     public void run() {
-        System.out.println(toString() + " run...");
+        System.out.println(toString() + " execute...");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

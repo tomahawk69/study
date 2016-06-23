@@ -42,7 +42,7 @@ public class ThreadStudy extends Thread {
     public class SimpleLock extends Thread {
         @Override
         public void run() {
-            System.out.println("SimpleLock run");
+            System.out.println("SimpleLock execute");
             super.run();
         }
 
@@ -58,7 +58,7 @@ public class ThreadStudy extends Thread {
 
         @Override
         public void run() {
-            System.out.println("SimpleRunnable run");
+            System.out.println("SimpleRunnable execute");
             try {
                 sleep(10000);
             } catch (InterruptedException e) {
@@ -87,7 +87,7 @@ public class ThreadStudy extends Thread {
         @Override
         public void run() {
             isActive = true;
-            System.out.println("JoinRunnable " + title + " run");
+            System.out.println("JoinRunnable " + title + " execute");
             try {
                 sleep(10000);
                 isActive = false;
@@ -112,7 +112,7 @@ public class ThreadStudy extends Thread {
 
         @Override
         public void run() {
-            System.out.println("InterruptedRunnable run");
+            System.out.println("InterruptedRunnable execute");
             while (true) {
                 if (interrupted()) {
                     System.out.println("InterruptedRunnable interrupted!!");
