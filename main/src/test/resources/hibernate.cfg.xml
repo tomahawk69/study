@@ -9,7 +9,7 @@
             org.hsqldb.jdbc.JDBCDriver
         </property>
         <property name="connection.url">
-            jdbc:hsqldb:c://temp//db2;shutdown=true
+            jdbc:hsqldb:c://temp//hibernate_tests//db2;shutdown=true
         </property>
         <property name="connection.username">sa</property>
         <property name="connection.password"/>
@@ -17,7 +17,7 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">create</property>
         <mapping class="org.study.hibernate.simple.PojoPerson"/>
         <mapping class="org.study.hibernate.simple.UUIDPojo"/>
         <mapping class="org.study.hibernate.simple.SequencedPojo"/>
@@ -29,5 +29,9 @@
         <mapping class="org.study.hibernate.criterias.Person"/>
         <mapping class="org.study.hibernate.collections.Person"/>
         <mapping class="org.study.hibernate.collections.Email"/>
+        <mapping class="org.study.hibernate.inheritance.BaseClass"/>
+        <mapping class="org.study.hibernate.inheritance.ClassB"/>
+        <mapping class="org.study.hibernate.inheritance.ClassC"/>
+        <mapping class="org.study.hibernate.inheritance.ClassCD"/>
     </session-factory>
 </hibernate-configuration>
