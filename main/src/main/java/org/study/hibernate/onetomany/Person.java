@@ -16,6 +16,9 @@ public class Person {
     @OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
     private List<Email> emails;
 
+    @ManyToMany
+    private List<Address> addresses;
+
     public String getName() {
         return name;
     }
@@ -37,7 +40,6 @@ public class Person {
         return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", emails=" + (emails == null ? null : emails.stream().map(x -> x.getEmail()).collect(Collectors.toList())) +
                 '}';
     }
 }

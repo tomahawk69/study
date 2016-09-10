@@ -26,6 +26,7 @@
         <mapping class="org.study.hibernate.enums.Person"/>
         <mapping class="org.study.hibernate.onetomany.Email"/>
         <mapping class="org.study.hibernate.onetomany.Person"/>
+        <mapping class="org.study.hibernate.onetomany.Address"/>
         <mapping class="org.study.hibernate.criterias.Person"/>
         <mapping class="org.study.hibernate.collections.Person"/>
         <mapping class="org.study.hibernate.collections.Email"/>
