@@ -1,38 +1,39 @@
 package algorithms.common;
 
+import algorithms.common.quickfindunion.QuickFindUnion;
+import algorithms.common.quickfindunion.QuickUnion;
+import algorithms.common.quickfindunion.WeightedQuickUnion;
+import algorithms.common.quickfindunion.WeightedQuickUnionWithPathCompression;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
-public class WeightedQuickUnionTest {
+public class WeightedQuickUnionTest extends QuickFindUnionTest {
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void findInit() throws Exception {
-        QuickFindUnionTest tester = new QuickFindUnionTest();
         int n = 10;
         QuickFindUnion quickFind = new WeightedQuickUnion(n);
-        tester.testFind(quickFind, n);
+        testFind(quickFind, n);
     }
 
     @Test
     public void union() throws Exception {
-        QuickFindUnionTest tester = new QuickFindUnionTest();
         int n = 10;
         QuickFindUnion quickFind = new WeightedQuickUnion(n);
-        tester.testUnion(quickFind, n, 4, 1, 7);
+        testUnion(quickFind, n, 4, 1, 7);
     }
 
     @Test
     public void unionRandom() throws Exception {
-        QuickFindUnionTest tester = new QuickFindUnionTest();
         int n = 10;
         QuickFindUnion quickFind = new WeightedQuickUnion(n);
-        tester.testUnionRandom(quickFind, n);
+        testUnionRandom(quickFind, n);
     }
 
     @Test

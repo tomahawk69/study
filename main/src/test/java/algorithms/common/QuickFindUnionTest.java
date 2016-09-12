@@ -1,14 +1,14 @@
 package algorithms.common;
 
-import org.junit.Ignore;
+import algorithms.common.quickfindunion.QuickFindUnion;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Rule;
-import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.rules.Stopwatch;
 import org.junit.runner.Description;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
@@ -18,35 +18,35 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class QuickFindUnionTest {
-    //    private static final Logger logger = LogManager.getLogger(QuickFindUnionTest.class);
+    private static final Logger logger = LogManager.getLogger(QuickFindUnionTest.class);
     private ThreadLocalRandom random = ThreadLocalRandom.current();
 
-    //    private static void logInfo(Description description, String status, long nanos) {
-//        String testName = description.getMethodName();
-//        logger.info(String.format("Test %s %s, spent %d microseconds",
-//                testName, status, TimeUnit.NANOSECONDS.toMicros(nanos)));
-//    }
-//
+    private static void logInfo(Description description, String status, long nanos) {
+        String testName = description.getMethodName();
+        logger.info(String.format("Test %s %s, spent %d microseconds",
+                testName, status, TimeUnit.NANOSECONDS.toMicros(nanos)));
+    }
+
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
-//    @Rule
-//    public Stopwatch stopwatch = new Stopwatch() {
-//        @Override
-//        protected void succeeded(long nanos, Description description) {
-//            logInfo(description, "succeeded", nanos);
-//        }
-//
-//        @Override
-//        protected void failed(long nanos, Throwable e, Description description) {
-//            logInfo(description, "failed", nanos);
-//        }
-//
-//        @Override
-//        protected void finished(long nanos, Description description) {
-//            logInfo(description, "finished", nanos);
-//        }
-//    };
+    @Rule
+    public Stopwatch stopwatch = new Stopwatch() {
+        @Override
+        protected void succeeded(long nanos, Description description) {
+            logInfo(description, "succeeded", nanos);
+        }
+
+        @Override
+        protected void failed(long nanos, Throwable e, Description description) {
+            logInfo(description, "failed", nanos);
+        }
+
+        @Override
+        protected void finished(long nanos, Description description) {
+            logInfo(description, "finished", nanos);
+        }
+    };
 
     public void testFind(QuickFindUnion quickFind, int size) throws Exception {
         for (int i = 0; i < size; i++) {

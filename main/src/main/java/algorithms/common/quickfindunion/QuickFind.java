@@ -1,6 +1,4 @@
-package algorithms.common;
-
-import com.sun.javaws.exceptions.InvalidArgumentException;
+package algorithms.common.quickfindunion;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

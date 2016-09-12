@@ -1,4 +1,4 @@
-package algorithms.common;
+package algorithms.common.quickfindunion;
 
 public interface QuickFindUnion {
 
