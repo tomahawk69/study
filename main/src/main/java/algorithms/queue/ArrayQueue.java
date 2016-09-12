@@ -1,11 +1,11 @@
 package algorithms.queue;
 
-import java.util.Arrays;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class ArrayQueue<T> {
+public class ArrayQueue<T> implements Iterable<T> {
     public static final int MIN_SIZE = 10;
     private T[] heap;
     private int start = 0;
@@ -52,6 +52,29 @@ public class ArrayQueue<T> {
         end = end - start;
         start = 0;
         heap = newHeap;
+    }
+
+    private class ArrayQueueIterator implements Iterator<T> {
+
+        @Override
+        public boolean hasNext() {
+            return !isEmpty();
+        }
+
+        @Override
+        public T next() {
+            return dequeue();
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
+
+    public Iterator<T> iterator() {
+        return new ArrayQueueIterator();
     }
 
     @Override

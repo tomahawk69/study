@@ -46,4 +46,15 @@ public class ArrayQueueTest {
         queue.dequeue();
     }
 
+    @Test
+    public void testIterator() throws Exception {
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+        for (int i = 0; i < ArrayQueue.MIN_SIZE * 4; i++) {
+            queue.enqueue(i);
+        }
+        Integer j = 0;
+        for (Integer value : queue) {
+            assertEquals(j++, value);
+        }
+    }
 }
