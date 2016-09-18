@@ -15,7 +15,7 @@ public class ShufflingTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     @Test
-    public void sort() throws Exception {
+    public void testShuffleKnuth() throws Exception {
         int size = 100;
         Integer[] items = IntStream.range(0, size).boxed().toArray(Integer[]::new);
         Shuffling shuffling = new Shuffling();
@@ -35,7 +35,7 @@ public class ShufflingTest {
     }
 
     @Test
-    public void sortNull() throws Exception {
+    public void sortNullKnuth() throws Exception {
         Integer[] items = null;
         expectedException.expect(NullPointerException.class);
         new Shuffling().sort(items);
