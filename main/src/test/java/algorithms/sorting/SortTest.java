@@ -1,7 +1,6 @@
 package algorithms.sorting;
 
 import org.junit.Rule;
-import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.Collections;
@@ -21,11 +20,15 @@ public class SortTest {
     }
 
     private void testArray(int size) {
-        List<Integer> list = IntStream.range(0, size).boxed().collect(Collectors.toList());
-        Collections.shuffle(list);
-        Integer[] array = list.toArray(new Integer[list.size()]);
+        Integer[] array = createRandomArrayOfIntegers(size);
         getSortObject().sort(array);
         assertArrayEquals(IntStream.range(0, size).boxed().toArray(), array);
+    }
+
+    protected Integer[] createRandomArrayOfIntegers(int size) {
+        List<Integer> list = IntStream.range(0, size).boxed().collect(Collectors.toList());
+        Collections.shuffle(list);
+        return list.toArray(new Integer[list.size()]);
     }
 
     public void testPositive() {

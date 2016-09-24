@@ -11,7 +11,12 @@ public class Shuffling extends Sort {
 
     @Override
     public void sort(Comparable[] items) {
-        for (int i = 1; i < items.length; i++) {
+        sort(items, 0, items.length);
+    }
+
+    @Override
+    public void sort(Comparable[] items, int lo, int hi) {
+        for (int i = lo + 1; i < hi; i++) {
             swap(items, i, random.nextInt(i));
         }
     }

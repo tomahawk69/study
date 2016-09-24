@@ -12,10 +12,16 @@ public abstract class Sort<T extends Comparable<? super T>> {
 
     public abstract void sort(Comparable<T>[] items);
 
+    public abstract void sort(Comparable<T>[] items, int lo, int hi);
+
     void swap(T[] array, int i, int j) {
         T k = array[i];
         array[i] = array[j];
         array[j] = k;
+    }
+
+    boolean less(T[] array, int i, int j) {
+        return array[i].compareTo(array[j]) < 0;
     }
 
     public static void main(String[] args) {
@@ -57,6 +63,24 @@ public abstract class Sort<T extends Comparable<? super T>> {
             LOGGER.info("-- shell sort");
             start = System.currentTimeMillis();
             new ShellSort().sort(Arrays.copyOf(testArray, testArray.length));
+            end = System.currentTimeMillis();
+            LOGGER.info("Sorted in " + (end - start) / 1000.0 + " secs");
+
+            LOGGER.info("-- quicksort");
+            start = System.currentTimeMillis();
+            new QuickSort().sort(Arrays.copyOf(testArray, testArray.length));
+            end = System.currentTimeMillis();
+            LOGGER.info("Sorted in " + (end - start) / 1000.0 + " secs");
+
+            LOGGER.info("-- quicksort 3-way");
+            start = System.currentTimeMillis();
+            new QuickSort3Way().sort(Arrays.copyOf(testArray, testArray.length));
+            end = System.currentTimeMillis();
+            LOGGER.info("Sorted in " + (end - start) / 1000.0 + " secs");
+
+            LOGGER.info("-- system sort");
+            start = System.currentTimeMillis();
+            Arrays.sort(Arrays.copyOf(testArray, testArray.length));
             end = System.currentTimeMillis();
             LOGGER.info("Sorted in " + (end - start) / 1000.0 + " secs");
         }
