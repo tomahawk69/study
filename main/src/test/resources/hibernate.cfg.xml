@@ -39,5 +39,6 @@
         <mapping class="org.study.hibernate.embedding.Address"/>
         <mapping class="org.study.hibernate.converter.Person"/>
         <mapping class="org.study.hibernate.converter.Address"/>
+        <mapping class="org.study.hibernate.customtype.Person"/>
     </session-factory>
 </hibernate-configuration>
