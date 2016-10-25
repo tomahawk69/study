@@ -10,7 +10,6 @@ import org.study.hibernate.HibernateUtils;
 import static org.junit.Assert.*;
 
 /**
- * TODO: change the comment )
  * Created by yur on 25.10.2016.
  */
 public class HibernateEmbeddingTest {
