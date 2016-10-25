@@ -18,6 +18,7 @@
         <property name="show_sql">true</property>
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
+        <!--<mapping class="org.study.hibernate.*" />-->
         <mapping class="org.study.hibernate.simple.PojoPerson"/>
         <mapping class="org.study.hibernate.simple.UUIDPojo"/>
         <mapping class="org.study.hibernate.simple.SequencedPojo"/>
@@ -34,5 +35,9 @@
         <mapping class="org.study.hibernate.inheritance.ClassB"/>
         <mapping class="org.study.hibernate.inheritance.ClassC"/>
         <mapping class="org.study.hibernate.inheritance.ClassCD"/>
+        <mapping class="org.study.hibernate.embedding.Person"/>
+        <mapping class="org.study.hibernate.embedding.Address"/>
+        <mapping class="org.study.hibernate.converter.Person"/>
+        <mapping class="org.study.hibernate.converter.Address"/>
     </session-factory>
 </hibernate-configuration>
