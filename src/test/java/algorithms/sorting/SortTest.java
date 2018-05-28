@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SortTest {
 
@@ -37,5 +38,9 @@ public class SortTest {
         testArray(1);
     }
 
-
+    public void validateSort(Integer[] input) {
+        for (int i = 1; i < input.length; i++) {
+            assertTrue(String.format("[%d] error: %d < %d", i, input[i], input[i - 1]), input[i] >=  input[i - 1]);
+        }
+    }
 }

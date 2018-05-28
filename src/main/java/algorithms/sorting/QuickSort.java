@@ -19,7 +19,7 @@ public class QuickSort extends Sort {
 
     @Override
     public void sort(Comparable[] items) {
-        new Shuffling().sort(items);
+        //new Shuffling().sort(items);
         sort(items, 0, items.length - 1);
     }
 
@@ -31,7 +31,7 @@ public class QuickSort extends Sort {
         if (hi - lo < CUTOFF) {
             insertionSort.sort(items, lo, hi + 1);
         } else {
-            swap(items, lo, findMedian(items, lo, hi));
+            //swap(items, lo, findMedian(items, lo, hi));
             int j = partition(items, lo, hi);
             sort(items, lo, j - 1);
             sort(items, j + 1, hi);

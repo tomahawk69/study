@@ -21,4 +21,19 @@ public class QuickSortTest extends SortTest {
         new QuickSort().sort(array);
     }
 
+    @Test
+    public void testSpecific1() throws Exception {
+//        Integer[] array = {0, 1, 0, 2, 0, 7, 0, 4, 0, 2, 0};
+        Integer[] array = {0, 7, 0, 2, 3, 2, 2, 8, 6, 8, 1, 0};
+        new QuickSort().sort(array);
+        validateSort(array);
+    }
+
+    @Test
+    public void testSpecific2() throws Exception {
+        Integer[] array = {9, 1, 0, 2, 0, 7, 0, 4, 0, 2, 0};
+        new QuickSort().sort(array);
+        validateSort(array);
+    }
+
 }
