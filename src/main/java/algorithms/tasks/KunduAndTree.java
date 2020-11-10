@@ -20,9 +20,9 @@ Algorithm:
 1) group nodes by one common node (the node with most connections)
 2) count all possible combinations of triplexes based on count of nodes:
 - count * (count - 1) * (count - 2) / 6
-3) for every group of nodes subtract all possible combinations of triplexes
+3) for every group of nodes subtract all possible combinations of triplexes within group
 - count * (count - 1) * (count - 2) / 6
-4) for every group of nodes subtract all possible combinations of vertexes AND multiply on the count of nodes minus size of group
+4) for every group of nodes subtract all possible combinations of vertexes within group AND multiply on the every node in other groups
 - (count * (count - 1) / 2) * (n - count)
 5) the remain is the goal
 
