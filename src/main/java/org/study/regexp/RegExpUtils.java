@@ -11,12 +11,12 @@ public class RegExpUtils {
     This method counts and returns the total number of syllables in the
     document (the stored text). To count the number of syllables in a word,
     you should use the rule that every contiguous sequence of one or more vowels,
-    except for a lone ìeî at the end of a word if the word has another vowel
+    except for a lone ‚Äúe‚Äù at the end of a word if the word has another vowel
     or set of contiguous vowels, makes up one syllable. You should consider
-    y a vowel. Under these rules the words ìtheî, ìflyî, ìyesî, ìcaveî and
-    ìdoubleî all have 1 syllable, but "segue" has two syllables. Notice that
-    this isnít exactly correct (ìdoubleî actually has 2 syllables),
-    but itís close enough for our purposes. Here are some more examples
+    y a vowel. Under these rules the words ‚Äúthe‚Äù, ‚Äúfly‚Äù, ‚Äúyes‚Äù, ‚Äúcave‚Äù and
+    ‚Äúdouble‚Äù all have 1 syllable, but "segue" has two syllables. Notice that
+    this isn‚Äôt exactly correct (‚Äúdouble‚Äù actually has 2 syllables),
+    but it‚Äôs close enough for our purposes. Here are some more examples
     with the number of syllables your method should return to help you:
         "contiguous" (3 syllables), "sleepy" (2 syllables),
         "obvious" (2 syllables), "toga" (2 syllables).

@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/**
+/**Á
  * A randomized queue is similar to a stack or queue, except that the item removed is chosen uniformly at random
  * from items in the data structure
  * Corner cases. The order of two or more iterators to the same randomized queue must be mutually independent;
